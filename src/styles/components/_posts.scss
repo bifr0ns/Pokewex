@@ -1,0 +1,17 @@
+.pokegallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: space-between;
+    margin: 10px;
+}
+
+.card {
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 6px 10px 5px 0px rgba(199, 197, 199, 0.75);
+    background-color: #f0f0c9;
+    width: 12rem;
+    height: 30rem;
+    cursor: pointer;
+}
