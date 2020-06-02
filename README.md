@@ -81,7 +81,7 @@ There are still a lot of things that can be implemented while I keep learning Re
 > As of now theres only one render test
 
 - Dinamic pagination
-- Change page with arows
+- Change page with arrows
 - Change the language of pokemon descriptions
 - Add github actions with AWS
 
