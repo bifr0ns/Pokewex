@@ -24,8 +24,12 @@ button:disabled {
     font-weight: bold;
 }
 
-.container {
+.containerApp {
     max-width: $app-size;
     margin: 0 auto;
     padding: 0 $m-size;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }

@@ -12,6 +12,10 @@ const Posts = ({ posts, loading, allPokemon }) => {
 
     const showModal = (show) => setMostrar(show);
 
+    const changePokemon = (newPokemon) => {
+        setPokemon(newPokemon);
+    };
+
     function capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
@@ -36,6 +40,7 @@ const Posts = ({ posts, loading, allPokemon }) => {
                     mostrar={mostrar}
                     showModal={showModal}
                     somePokemon={allPokemon}
+                    changePokemon={changePokemon}
                 />
             )}
             {posts
@@ -43,7 +48,7 @@ const Posts = ({ posts, loading, allPokemon }) => {
                 .map((pokemon, i) => (
                     <div id={pokemon.id} key={pokemon.id}>
                         <div
-                            className="card"
+                            className="cardPokemon"
                             onClick={() => infoPokemon(pokemon)}
                         >
                             <img

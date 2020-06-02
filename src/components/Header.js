@@ -5,7 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 const Header = () => (
     <header>
         <Navbar bg="danger" expand="xl">
-            <div className="container">
+            <div className="containerApp">
                 <NavLink
                     to="/pokedex"
                     activeClassName="logoHeader"

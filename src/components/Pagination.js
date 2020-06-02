@@ -30,18 +30,6 @@ const Pagination = ({ postsPerPage, totalPosts, paginate, currentPage }) => {
                 </a>
             )}
         </div>
-        /* <div>
-            {pageNumbers.map((number) => (
-                <a
-                    className="bg-danger text-white rounded-circle p-2"
-                    id="pagination"
-                    key={number}
-                    onClick={() => paginate(number)}
-                >
-                    {number}
-                </a>
-            ))}
-        </div> */
     );
 };
 

@@ -17,7 +17,9 @@ const Pokedex = () => {
             let numberOfPokemon = await (
                 await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=1`)
             ).json();
-            setPokeUrl(`https://pokeapi.co/api/v2/pokemon/?limit=${numberOfPokemon.count}`);
+            setPokeUrl(
+                `https://pokeapi.co/api/v2/pokemon/?limit=${numberOfPokemon.count}`
+            );
         }
 
         getNumbersPokemon();

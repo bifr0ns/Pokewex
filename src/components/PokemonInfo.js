@@ -2,7 +2,13 @@ import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
-const PokemonInfo = ({ pokemon, mostrar, showModal, somePokemon }) => {
+const PokemonInfo = ({
+    pokemon,
+    mostrar,
+    showModal,
+    somePokemon,
+    changePokemon,
+}) => {
     const [pokemonDescription, setPokemonDescription] = useState();
     const [urlEvolution, setUrlEvolution] = useState();
     const [levelOne, setLevelOne] = useState(null);
@@ -28,7 +34,7 @@ const PokemonInfo = ({ pokemon, mostrar, showModal, somePokemon }) => {
         }
 
         getDescriptionPokemon();
-    }, []);
+    }, [pokemon]);
 
     useEffect(() => {
         async function getEvolutionPokemon() {
@@ -42,11 +48,10 @@ const PokemonInfo = ({ pokemon, mostrar, showModal, somePokemon }) => {
                       /[//]/
                   )[6]
                 : null;
-            somePokemon.map((img) => {
-                if (img.id == one) setLevelOne(img.sprites.front_default);
-                else if (img.id == two) setLevelTwo(img.sprites.front_default);
-                else if (img.id == three)
-                    setLevelThree(img.sprites.front_default);
+            somePokemon.map((newPokemon) => {
+                if (newPokemon.id == one) setLevelOne(newPokemon);
+                else if (newPokemon.id == two) setLevelTwo(newPokemon);
+                else if (newPokemon.id == three) setLevelThree(newPokemon);
             });
         }
 
@@ -91,9 +96,30 @@ const PokemonInfo = ({ pokemon, mostrar, showModal, somePokemon }) => {
                     </p>
                 )}
                 <div>
-                    {levelOne && <img src={levelOne} alt="pokemon" />}{" "}
-                    {levelTwo && <img src={levelTwo} alt="pokemon" />}{" "}
-                    {levelThree && <img src={levelThree} alt="pokemon" />}
+                    {levelOne && (
+                        <img
+                            className="imgpokemon"
+                            src={levelOne.sprites.front_default}
+                            alt="pokemon"
+                            onClick={() => changePokemon(levelOne)}
+                        />
+                    )}{" "}
+                    {levelTwo && (
+                        <img
+                            className="imgpokemon"
+                            src={levelTwo.sprites.front_default}
+                            alt="pokemon"
+                            onClick={() => changePokemon(levelTwo)}
+                        />
+                    )}{" "}
+                    {levelThree && (
+                        <img
+                            className="imgpokemon"
+                            src={levelThree.sprites.front_default}
+                            alt="pokemon"
+                            onClick={() => changePokemon(levelThree)}
+                        />
+                    )}
                 </div>
             </Modal.Body>
             <Modal.Footer>
