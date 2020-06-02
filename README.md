@@ -83,3 +83,6 @@ There are still a lot of things that can be implemented while I keep learning Re
 - Dinamic pagination
 - Change page with arows
 - Change the language of pokemon descriptions
+- Add github actions with AWS
+
+> This was my first option, but I could not make it work, ill keep trying so it can be deployed automatically
