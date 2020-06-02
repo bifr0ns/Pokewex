@@ -71,13 +71,13 @@ const PokemonInfo = ({
             </Modal.Header>
             <Modal.Body>
                 <img src={pokemon.sprites.front_default} alt="pokemon" />
-                <p>
+                <h3>
                     <strong>Type:</strong> {pokemon.types[0].type.name}
-                </p>
-                <p>
+                </h3>
+                <h3>
                     <strong>Weight:</strong> {pokemon.weight}
-                </p>
-                <p>
+                </h3>
+                <h3>
                     <strong>Abilities:</strong>
                     {pokemon.abilities.map((abilities, i) => (
                         <div id={pokemon.name + i} key={pokemon.name + i}>
@@ -86,14 +86,14 @@ const PokemonInfo = ({
                             </div>
                         </div>
                     ))}
-                </p>
-                <p>
+                </h3>
+                <h3>
                     <em>{pokemonDescription}</em>
-                </p>
+                </h3>
                 {levelOne && (
-                    <p>
+                    <h3>
                         <strong>Evolutions:</strong>{" "}
-                    </p>
+                    </h3>
                 )}
                 <div>
                     {levelOne && (

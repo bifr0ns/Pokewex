@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Header correctly 1`] = `
+<header>
+  <[object Object]
+    bg="danger"
+    collapseOnSelect={false}
+    expand="xl"
+    variant="light"
+  >
+    <div
+      className="containerApp"
+    >
+      <NavLink
+        activeClassName="logoHeader"
+        ariaCurrent="true"
+        exact={true}
+        to="/pokedex"
+      >
+        <h1>
+          Pokewex
+        </h1>
+      </NavLink>
+    </div>
+  </[object Object]>
+</header>
+`;
