@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PokemonInfo from "./PokemonInfo";
 
-const Posts = ({ posts, loading, allPokemon }) => {
+const Posts = ({ posts, loading, allPokemon, language }) => {
     const [pokemon, setPokemon] = useState([]);
     const [mostrar, setMostrar] = useState(false);
 
@@ -32,6 +32,14 @@ const Posts = ({ posts, loading, allPokemon }) => {
         );
     }
 
+    if (posts == "error") {
+        return (
+            <div>
+                There was an error with the info. Please try reloading again.
+            </div>
+        );
+    }
+
     return (
         <div className="pokegallery">
             {mostrar && (
@@ -41,6 +49,7 @@ const Posts = ({ posts, loading, allPokemon }) => {
                     showModal={showModal}
                     somePokemon={allPokemon}
                     changePokemon={changePokemon}
+                    language={language}
                 />
             )}
             {posts

@@ -60,7 +60,7 @@ You should get an URL where it was deployed
 
 ## Tests
 
-Tests are on folder /src/tess. To run the tests 
+Tests are on folder /src/tests. To run the tests 
 
 ```
 yarn run test
@@ -80,9 +80,9 @@ There are still a lot of things that can be implemented while I keep learning Re
 
 > As of now theres only one render test
 
-- Dinamic pagination
+- <s>Dinamic pagination</s>
 - Change page with arrows
-- Change the language of pokemon descriptions
+- <s>Change the language of pokemon descriptions</s>
 - Add github actions with AWS
 
 > This was my first option, but I could not make it work, ill keep trying so it can be deployed automatically

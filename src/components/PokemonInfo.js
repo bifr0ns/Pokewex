@@ -8,6 +8,7 @@ const PokemonInfo = ({
     showModal,
     somePokemon,
     changePokemon,
+    language,
 }) => {
     const [pokemonDescription, setPokemonDescription] = useState();
     const [urlEvolution, setUrlEvolution] = useState();
@@ -25,7 +26,7 @@ const PokemonInfo = ({
             setUrlEvolution(pokemonSpecie.evolution_chain.url);
             await Promise.all(
                 pokemonSpecie.flavor_text_entries.map(async (specie) => {
-                    if (specie.language.name == "en") {
+                    if (specie.language.name == language) {
                         setPokemonDescription(specie.flavor_text);
                         return 0;
                     }
@@ -131,4 +132,4 @@ const PokemonInfo = ({
     );
 };
 
-export default PokemonInfo;
+export default React.memo(PokemonInfo);
